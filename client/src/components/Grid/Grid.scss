@@ -1,0 +1,9 @@
+@import '../../sass/colors';
+
+table,
+tbody,
+tr,
+td {
+    border: 1px solid $c-gray-700;
+    border-collapse: collapse;
+}
