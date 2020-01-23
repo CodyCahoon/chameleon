@@ -1,0 +1,14 @@
+$c-white: #ffffff;
+
+$c-gray-100: #f8f9fa;
+$c-gray-400: #6c757d;
+$c-gray-600: #3c464c;
+$c-gray-700: #343a40;
+
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
