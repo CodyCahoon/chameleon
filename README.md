@@ -1,6 +1,6 @@
-# lights
+# chameleon
 
-A game of lights built using the React
+A game of chameleon, try to fit in...
 
 ## Setup
 
