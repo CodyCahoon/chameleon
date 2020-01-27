@@ -7,4 +7,8 @@ export namespace Util {
         }
         return Array.from(values) as string[];
     }
+
+    export function randomNumber(max: number): number {
+        return Math.floor(Math.random() * max);
+    }
 }

@@ -10,6 +10,7 @@ export interface Game {
     id: string;
     die1?: number;
     die2?: number;
+    modifier?: string;
     topic: Topic;
 }
 
@@ -30,13 +31,14 @@ export class GameService {
 
         game.die1 = GameService.rollDie(6);
         game.die2 = GameService.rollDie(8);
+        game.modifier = GameService.generateModifier();
 
         this.games.set(gameId, game);
         return game;
     }
 
     private static generateTopic(): Topic {
-        const index = Math.floor(Math.random() * topics.length);
+        const index = Util.randomNumber(topics.length);
         const topic = topics[index];
 
         return {
@@ -46,11 +48,17 @@ export class GameService {
     }
 
     private static rollDie(sides = 6): number {
-        return Math.floor(Math.random() * sides) + 1;
+        return Util.randomNumber(sides) + 1;
+    }
+
+    private static generateModifier(): string {
+        const modifiers = ['-2', '-1', '+1', '+2'];
+        const index = Util.randomNumber(modifiers.length);
+        return modifiers[index];
     }
 
     private static generateGameId(): string {
-        const randomNum = () => Math.floor(Math.random() * 10);
-        return [randomNum(), randomNum(), randomNum(), randomNum()].join('');
+        const num = () => Util.randomNumber(10);
+        return [num(), num(), num(), num()].join('');
     }
 }
