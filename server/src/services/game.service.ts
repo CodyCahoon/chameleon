@@ -14,27 +14,13 @@ export interface Game {
 }
 
 export class GameService {
-    private games = new Map<string, Game>();
-
     public createGame(): Game {
-        const newGame: Game = {
+        return {
             id: GameService.generateGameId(),
             topic: GameService.generateTopic(),
             die1: GameService.rollDie(6),
             die2: GameService.rollDie(8),
         };
-        this.games.set(newGame.id, newGame);
-        return newGame;
-    }
-
-    public rollDice(gameId: string): Game {
-        const game = { ...this.games.get(gameId) };
-
-        game.die1 = GameService.rollDie(6);
-        game.die2 = GameService.rollDie(8);
-
-        this.games.set(gameId, game);
-        return game;
     }
 
     private static generateTopic(): Topic {

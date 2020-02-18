@@ -16,22 +16,6 @@ app.post('/game', (req, res) => {
     });
 });
 
-app.post('/game/:gameId/dice', (req, res) => {
-    const gameId = req.params.gameId;
-    res.send({
-        data: gameService.rollDice(gameId),
-    });
-});
-
-wss.on('connection', (ws: WebSocket) => {
-    ws.onmessage = (ev: MessageEvent) => {
-        const event = JSON.parse(ev.data);
-
-        switch (event.type) {
-        }
-    };
-});
-
 server.listen(port, () => {
     console.log(`server started at http://localhost:${port}`);
 });
