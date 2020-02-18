@@ -34,9 +34,17 @@ const App = () => {
         return <Dice die1={game.die1!} die2={game.die2!}></Dice>;
     };
 
+    const renderCategory = () => {
+        if (!game || !game.topic) {
+            return null;
+        }
+        return <h1 className="category">{game.topic.category}</h1>;
+    };
+
     return (
         <div className="app">
             <button onClick={createGame}>New Game</button>
+            {renderCategory()}
             <Grid topic={game.topic}></Grid>
             {renderDice()}
         </div>
