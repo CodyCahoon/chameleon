@@ -20,6 +20,8 @@ export class GameService {
         const newGame: Game = {
             id: GameService.generateGameId(),
             topic: GameService.generateTopic(),
+            die1: GameService.rollDie(6),
+            die2: GameService.rollDie(8),
         };
         this.games.set(newGame.id, newGame);
         return newGame;

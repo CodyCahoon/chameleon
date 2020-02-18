@@ -9,6 +9,7 @@ $c-yellow-400: #e9e55d;
 
 $c-blue-100: #d6efeb;
 $c-blue-400: #84cfbf;
+$c-blue-700: #0090f6;
 
 @function tint($color, $percentage) {
     @return mix(white, $color, $percentage);
