@@ -7,4 +7,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    button {
+        background: none;
+        border: none;
+        color: $c-gray-400;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 200ms ease-in-out;
+
+        &:hover {
+            color: $c-gray-700;
+        }
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
 }

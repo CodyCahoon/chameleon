@@ -5,6 +5,11 @@ $c-gray-400: #6c757d;
 $c-gray-600: #3c464c;
 $c-gray-700: #343a40;
 
+$c-yellow-400: #e9e55d;
+
+$c-blue-100: #d6efeb;
+$c-blue-400: #84cfbf;
+
 @function tint($color, $percentage) {
     @return mix(white, $color, $percentage);
 }

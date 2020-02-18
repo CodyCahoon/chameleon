@@ -1,0 +1,34 @@
+@import '../../sass/colors';
+
+.grid {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90vw;
+    }
+
+    &__cell {
+        display: flex;
+        font-size: 20px;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        text-align: center;
+        height: 100px;
+        padding: 10px 20px;
+        color: $c-gray-700;
+
+        &--white {
+            background-color: $c-white;
+        }
+
+        &--blue {
+            background: $c-blue-100;
+        }
+    }
+}
