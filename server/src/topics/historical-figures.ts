@@ -1,6 +1,6 @@
 import { Topic } from '../services/game.service';
 
-export const historicalFigures: Topic = {
+const topic: Topic = {
     category: 'Historical Figures',
     words: [
         'Buddha',
@@ -21,3 +21,5 @@ export const historicalFigures: Topic = {
         'Winston Churchill',
     ],
 };
+
+export default topic;

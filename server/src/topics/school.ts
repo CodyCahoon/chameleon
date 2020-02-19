@@ -1,6 +1,6 @@
 import { Topic } from '../services/game.service';
 
-export const school: Topic = {
+const topic: Topic = {
     category: 'School',
     words: [
         'Art',
@@ -21,3 +21,5 @@ export const school: Topic = {
         'Technology',
     ],
 };
+
+export default topic;
