@@ -1,6 +1,6 @@
 # chameleon
 
-A game of chameleon, try to fit in...
+A game of chameleon, try to blend in...
 
 ## Setup
 
