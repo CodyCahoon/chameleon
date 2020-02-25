@@ -7,6 +7,7 @@ import filmGenres from './film-genres';
 import historicalFigures from './historical-figures';
 import movies from './movies';
 import school from './school';
+import sports from './sports';
 import zoo from './zoo';
 
 export const topics = [
@@ -19,5 +20,6 @@ export const topics = [
     historicalFigures,
     movies,
     school,
+    sports,
     zoo,
 ];
